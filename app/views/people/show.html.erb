@@ -1,29 +1,26 @@
 <p id="notice"><%= notice %></p>
+ 
+<div class='ui card'> 
+  <div class='image'>
+    <img alt="avatar" src="<%= @person.avatar %>" /> 
+  </div>
+  <div class='content'>
+    <p class='header'>
+      <%= @person.first_name %> 
+    </p>
+    <p>Type: <%= @person.last_name %></p>
+    <div class='meta'>
+      <span>HP: <%= @person.phone %></span>
+    </div>
+    <div class='description'>
+      Dex#: <%= @person.email %> 
+    </div>
+  </div>
+  <div class='extra content'>
+    <%= link_to 'Edit', edit_person_path(@person) %> |
+    <%= link_to 'Back', people_path %>
+  </div>
+</div>
 
-<p>
-  <strong>First name:</strong>
-  <%= @person.first_name %>
-</p>
 
-<p>
-  <strong>Last name:</strong>
-  <%= @person.last_name %>
-</p>
 
-<p>
-  <strong>Avatar:</strong>
-  <%= @person.avatar %>
-</p>
-
-<p>
-  <strong>Phone:</strong>
-  <%= @person.phone %>
-</p>
-
-<p>
-  <strong>Email:</strong>
-  <%= @person.email %>
-</p>
-
-<%= link_to 'Edit', edit_person_path(@person) %> |
-<%= link_to 'Back', people_path %>
